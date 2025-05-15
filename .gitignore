@@ -112,3 +112,7 @@ build/
 *_BASE_*.txt
 *_LOCAL_*.txt
 *_REMOTE_*.txt
+
+# Configurações locais sensíveis
+src/main/resources/application.properties
+src/main/resources/application-*.properties
