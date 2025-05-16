@@ -1,5 +1,7 @@
 package com.kprojetos.IgrejaConectada.dominio.objetosDeValor;
 
+import java.util.Objects;
+
 public class Senha {
     private String valor;
     private static final String REGRAS_SENHA =
@@ -26,5 +28,19 @@ public class Senha {
 
     public String getValor() {
         return valor;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Senha senha = (Senha) o;
+        return Objects.equals(valor, senha.valor);
+    }
+
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(valor);
     }
 }

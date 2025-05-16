@@ -1,5 +1,6 @@
 package com.kprojetos.IgrejaConectada.dominio.objetosDeValor;
 
+import java.util.Objects;
 import java.util.regex.Pattern;
 
 public class Email {
@@ -29,5 +30,19 @@ public class Email {
 
     public String getValor() {
         return valor;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Email email = (Email) o;
+        return Objects.equals(valor, email.valor);
+    }
+
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(valor);
     }
 }
