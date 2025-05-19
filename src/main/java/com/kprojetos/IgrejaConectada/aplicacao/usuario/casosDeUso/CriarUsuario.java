@@ -23,7 +23,7 @@ public class CriarUsuario {
         Usuario usuario = UsuarioFabrica.criar(dto);
         usuario = repositorio.criarUsuario(usuario);
 
-        return UsuarioMapeador.paraDTO(usuario);
+        return UsuarioMapeador.paraUsuarioRespostaDTO(usuario);
     }
 
 

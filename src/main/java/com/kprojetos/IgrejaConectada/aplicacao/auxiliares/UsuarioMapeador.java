@@ -7,7 +7,7 @@ public final class UsuarioMapeador {
     private UsuarioMapeador() {}
 
 
-    public static UsuarioRespostaDTO paraDTO(Usuario usuario) {
+    public static UsuarioRespostaDTO paraUsuarioRespostaDTO(Usuario usuario) {
         return new UsuarioRespostaDTO(
                 usuario.getId(),
                 usuario.getNome().getValor(),
