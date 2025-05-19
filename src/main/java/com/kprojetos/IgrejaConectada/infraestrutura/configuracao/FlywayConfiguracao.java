@@ -32,6 +32,14 @@ public class FlywayConfiguracao {
 
 
     @Bean
+    @Profile("test")
+    @ConditionalOnProperty(name = "spring.flyway.enabled", havingValue = "true", matchIfMissing = false)
+    public Flyway flywayTest() {
+        return configurarFlyway(migrationLocation + "/test");
+    }
+
+
+    @Bean
     @Profile("production")
     public Flyway flywayProduction() {
         return configurarFlyway(migrationLocation + "/production");
