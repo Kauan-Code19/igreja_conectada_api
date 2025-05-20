@@ -1,7 +1,7 @@
 package com.kprojetos.IgrejaConectada.dominio.usuario;
 
-import com.kprojetos.IgrejaConectada.aplicacao.auxiliares.ConversorParaObjetosDeValor;
-import com.kprojetos.IgrejaConectada.aplicacao.auxiliares.UsuarioFabrica;
+import com.kprojetos.IgrejaConectada.aplicacao.ConversorParaObjetosDeValor;
+import com.kprojetos.IgrejaConectada.aplicacao.usuario.auxiliares.UsuarioFabrica;
 import com.kprojetos.IgrejaConectada.dominio.objetosDeValor.Email;
 import com.kprojetos.IgrejaConectada.dominio.objetosDeValor.Nome;
 import com.kprojetos.IgrejaConectada.dominio.objetosDeValor.Senha;
@@ -22,7 +22,8 @@ class UsuarioTest {
                 1L,
                 nome,
                 email,
-                senha
+                senha,
+                UsuarioTipo.ADMINISTRADOR
         );
 
         assertEquals(1L, usuario.getId());

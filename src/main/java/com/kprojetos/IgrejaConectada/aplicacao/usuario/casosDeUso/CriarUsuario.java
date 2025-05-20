@@ -1,8 +1,8 @@
 package com.kprojetos.IgrejaConectada.aplicacao.usuario.casosDeUso;
 
-import com.kprojetos.IgrejaConectada.aplicacao.auxiliares.ConversorParaObjetosDeValor;
-import com.kprojetos.IgrejaConectada.aplicacao.auxiliares.UsuarioFabrica;
-import com.kprojetos.IgrejaConectada.aplicacao.auxiliares.UsuarioMapeador;
+import com.kprojetos.IgrejaConectada.aplicacao.ConversorParaObjetosDeValor;
+import com.kprojetos.IgrejaConectada.aplicacao.usuario.auxiliares.UsuarioFabrica;
+import com.kprojetos.IgrejaConectada.aplicacao.usuario.auxiliares.UsuarioMapeador;
 import com.kprojetos.IgrejaConectada.aplicacao.usuario.dtos.CriarUsuarioDTO;
 import com.kprojetos.IgrejaConectada.aplicacao.usuario.dtos.UsuarioRespostaDTO;
 import com.kprojetos.IgrejaConectada.dominio.objetosDeValor.Email;

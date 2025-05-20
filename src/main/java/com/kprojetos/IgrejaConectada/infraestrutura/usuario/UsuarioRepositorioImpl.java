@@ -1,11 +1,12 @@
 package com.kprojetos.IgrejaConectada.infraestrutura.usuario;
 
-import com.kprojetos.IgrejaConectada.aplicacao.auxiliares.ConversorParaObjetosDeValor;
-import com.kprojetos.IgrejaConectada.aplicacao.auxiliares.UsuarioFabrica;
+import com.kprojetos.IgrejaConectada.aplicacao.ConversorParaObjetosDeValor;
+import com.kprojetos.IgrejaConectada.aplicacao.usuario.auxiliares.UsuarioFabrica;
 import com.kprojetos.IgrejaConectada.dominio.objetosDeValor.Email;
 import com.kprojetos.IgrejaConectada.dominio.usuario.Usuario;
 import com.kprojetos.IgrejaConectada.dominio.usuario.UsuarioRepositorio;
-import com.kprojetos.IgrejaConectada.infraestrutura.auxiliares.UsuarioEntidadeFabrica;
+import com.kprojetos.IgrejaConectada.infraestrutura.usuario.auxiliares.UsuarioEntidadeFabrica;
+
 import java.util.Optional;
 
 public class UsuarioRepositorioImpl implements UsuarioRepositorio {
@@ -28,7 +29,8 @@ public class UsuarioRepositorioImpl implements UsuarioRepositorio {
                 usuarioEntidade.getId(),
                 usuarioEntidade.getNome(),
                 usuarioEntidade.getEmail(),
-                usuarioEntidade.getSenha()
+                usuarioEntidade.getSenha(),
+                usuarioEntidade.getTipo()
         );
     }
 
@@ -42,7 +44,8 @@ public class UsuarioRepositorioImpl implements UsuarioRepositorio {
                 entidade.getId(),
                 ConversorParaObjetosDeValor.nome(entidade.getNome()),
                 ConversorParaObjetosDeValor.email(entidade.getEmail()),
-                ConversorParaObjetosDeValor.senha(entidade.getSenha())
+                ConversorParaObjetosDeValor.senha(entidade.getSenha()),
+                entidade.getTipo()
         ));
     }
 }

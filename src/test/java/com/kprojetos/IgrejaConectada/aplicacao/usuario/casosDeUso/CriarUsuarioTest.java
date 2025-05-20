@@ -1,13 +1,14 @@
 package com.kprojetos.IgrejaConectada.aplicacao.usuario.casosDeUso;
 
-import com.kprojetos.IgrejaConectada.aplicacao.auxiliares.ConversorParaObjetosDeValor;
-import com.kprojetos.IgrejaConectada.aplicacao.auxiliares.UsuarioFabrica;
-import com.kprojetos.IgrejaConectada.aplicacao.auxiliares.UsuarioMapeador;
+import com.kprojetos.IgrejaConectada.aplicacao.ConversorParaObjetosDeValor;
+import com.kprojetos.IgrejaConectada.aplicacao.usuario.auxiliares.UsuarioFabrica;
+import com.kprojetos.IgrejaConectada.aplicacao.usuario.auxiliares.UsuarioMapeador;
 import com.kprojetos.IgrejaConectada.aplicacao.usuario.dtos.CriarUsuarioDTO;
 import com.kprojetos.IgrejaConectada.aplicacao.usuario.dtos.UsuarioRespostaDTO;
 import com.kprojetos.IgrejaConectada.dominio.objetosDeValor.Email;
 import com.kprojetos.IgrejaConectada.dominio.usuario.Usuario;
 import com.kprojetos.IgrejaConectada.dominio.usuario.UsuarioRepositorio;
+import com.kprojetos.IgrejaConectada.dominio.usuario.UsuarioTipo;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -24,13 +25,15 @@ class CriarUsuarioTest {
     private final CriarUsuarioDTO dto = new CriarUsuarioDTO(
             "João Silva",
             "joao@email.com",
-            "senhaSegura@123"
+            "senhaSegura@123",
+            UsuarioTipo.ADMINISTRADOR
     );
     private final Usuario usuarioComId = UsuarioFabrica.criar(
             1L,
             "João Silva",
             "joao@email.com",
-            "senhaSegura@123"
+            "senhaSegura@123",
+            UsuarioTipo.ADMINISTRADOR
     );
 
     @Mock

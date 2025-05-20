@@ -2,6 +2,7 @@ package com.kprojetos.IgrejaConectada.interfaces.web.usuario;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.kprojetos.IgrejaConectada.aplicacao.usuario.dtos.CriarUsuarioDTO;
+import com.kprojetos.IgrejaConectada.dominio.usuario.UsuarioTipo;
 import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,8 @@ class UsuarioControladorTest {
     private final CriarUsuarioDTO dto = new CriarUsuarioDTO(
             "João Silva",
             "joao@email.com",
-            "senhaSegura@123"
+            "senhaSegura@123",
+            UsuarioTipo.ADMINISTRADOR
     );
 
     @Autowired

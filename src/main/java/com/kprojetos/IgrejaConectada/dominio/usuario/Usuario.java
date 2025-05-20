@@ -9,18 +9,21 @@ public class Usuario {
     private Nome nome;
     private Email email;
     private Senha senha;
+    private UsuarioTipo tipo;
 
 
     public Usuario(
             Long id,
             Nome nome,
             Email email,
-            Senha senha
+            Senha senha,
+            UsuarioTipo tipo
     ) {
         this.id = id;
         this.nome = nome;
         this.email = email;
         this.senha = senha;
+        this.tipo = tipo;
     }
 
 
@@ -28,15 +31,23 @@ public class Usuario {
         return id;
     }
 
+
     public Nome getNome() {
         return nome;
     }
+
 
     public Email getEmail() {
         return email;
     }
 
+
     public Senha getSenha() {
         return senha;
+    }
+
+
+    public UsuarioTipo getTipo() {
+        return tipo;
     }
 }

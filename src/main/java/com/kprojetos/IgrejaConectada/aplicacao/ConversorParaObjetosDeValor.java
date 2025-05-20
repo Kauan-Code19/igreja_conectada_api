@@ -1,4 +1,4 @@
-package com.kprojetos.IgrejaConectada.aplicacao.auxiliares;
+package com.kprojetos.IgrejaConectada.aplicacao;
 
 import com.kprojetos.IgrejaConectada.dominio.objetosDeValor.Email;
 import com.kprojetos.IgrejaConectada.dominio.objetosDeValor.Nome;

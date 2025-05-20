@@ -1,9 +1,10 @@
 package com.kprojetos.IgrejaConectada.infraestrutura.usuario;
 
-import com.kprojetos.IgrejaConectada.aplicacao.auxiliares.ConversorParaObjetosDeValor;
-import com.kprojetos.IgrejaConectada.aplicacao.auxiliares.UsuarioFabrica;
+import com.kprojetos.IgrejaConectada.aplicacao.ConversorParaObjetosDeValor;
+import com.kprojetos.IgrejaConectada.aplicacao.usuario.auxiliares.UsuarioFabrica;
 import com.kprojetos.IgrejaConectada.dominio.usuario.Usuario;
 import com.kprojetos.IgrejaConectada.dominio.usuario.UsuarioRepositorio;
+import com.kprojetos.IgrejaConectada.dominio.usuario.UsuarioTipo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +28,8 @@ class UsuarioRepositorioImplTest {
             null,
             nome,
             email,
-            senha
+            senha,
+            UsuarioTipo.ADMINISTRADOR
     );
 
     @Autowired

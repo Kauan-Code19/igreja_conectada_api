@@ -1,7 +1,9 @@
-package com.kprojetos.IgrejaConectada.aplicacao.auxiliares;
+package com.kprojetos.IgrejaConectada.aplicacao.usuario.auxiliares;
 
+import com.kprojetos.IgrejaConectada.aplicacao.ConversorParaObjetosDeValor;
 import com.kprojetos.IgrejaConectada.aplicacao.usuario.dtos.CriarUsuarioDTO;
 import com.kprojetos.IgrejaConectada.dominio.usuario.Usuario;
+import com.kprojetos.IgrejaConectada.dominio.usuario.UsuarioTipo;
 
 public final class UsuarioFabrica {
     private UsuarioFabrica() {}
@@ -11,7 +13,8 @@ public final class UsuarioFabrica {
                 null,
                 ConversorParaObjetosDeValor.nome(dto.nome()),
                 ConversorParaObjetosDeValor.email(dto.email()),
-                ConversorParaObjetosDeValor.senha(dto.senha())
+                ConversorParaObjetosDeValor.senha(dto.senha()),
+                dto.tipo()
         );
     }
 
@@ -20,13 +23,15 @@ public final class UsuarioFabrica {
             Long id,
             String nome,
             String email,
-            String senha
+            String senha,
+            UsuarioTipo tipo
     ) {
         return new Usuario(
                 id,
                 ConversorParaObjetosDeValor.nome(nome),
                 ConversorParaObjetosDeValor.email(email),
-                ConversorParaObjetosDeValor.senha(senha)
+                ConversorParaObjetosDeValor.senha(senha),
+                tipo
         );
     }
 }

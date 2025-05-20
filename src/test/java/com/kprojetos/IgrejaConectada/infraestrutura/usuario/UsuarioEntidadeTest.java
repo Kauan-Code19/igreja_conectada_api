@@ -1,9 +1,10 @@
 package com.kprojetos.IgrejaConectada.infraestrutura.usuario;
 
 
-import com.kprojetos.IgrejaConectada.aplicacao.auxiliares.UsuarioFabrica;
+import com.kprojetos.IgrejaConectada.aplicacao.usuario.auxiliares.UsuarioFabrica;
 import com.kprojetos.IgrejaConectada.dominio.usuario.Usuario;
-import com.kprojetos.IgrejaConectada.infraestrutura.auxiliares.UsuarioEntidadeFabrica;
+import com.kprojetos.IgrejaConectada.dominio.usuario.UsuarioTipo;
+import com.kprojetos.IgrejaConectada.infraestrutura.usuario.auxiliares.UsuarioEntidadeFabrica;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -15,7 +16,8 @@ class UsuarioEntidadeTest {
             1L,
             nome,
             email,
-            senha
+            senha,
+            UsuarioTipo.ADMINISTRADOR
     );
 
     @Test
